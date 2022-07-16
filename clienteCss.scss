@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 15/07/2022, 16:21:08
+    Author     : User
+*/
+
+.conteudo {
+    background-color: #A7CECB;
+    min-height: 600px;
+}
+
+.botao-cliente {
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.botao-cliente:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+}
+
+.botao-cliente-alterar {
+    background-color: #F1E1A6;
+}
+
+.botao-cliente-alterar:hover, .botao-cliente-atendimento:hover, .botao-cliente-criar:hover  {
+    font-weight: 700;
+}
+
+.botao-cliente-atendimento {
+    background-color: #C3E5AE;
+}
+
+.botao-cliente-criar {
+    background-color: #E1B083;
+}
+
+.header {
+    border-bottom: 2px solid black;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#container-cliente-alterar {
+    display: block;
+}
+
+#container-cliente-atendimento, #container-cliente-criar {
+    display: none;
+}
