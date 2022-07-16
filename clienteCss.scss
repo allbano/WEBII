@@ -27,7 +27,7 @@ and open the template in the editor.
     background-color: #F1E1A6;
 }
 
-.botao-cliente-alterar:hover, .botao-cliente-atendimento:hover, .botao-cliente-criar:hover  {
+.botao-cliente-alterar:hover, .botao-cliente-atendimento:hover, .botao-cliente-criar:hover, botao-cliente-deslogar  {
     font-weight: 700;
 }
 
@@ -39,16 +39,38 @@ and open the template in the editor.
     background-color: #E1B083;
 }
 
+.botao-cliente-deslogar {
+    background-color: #D47751;
+}
+
 .header {
     border-bottom: 2px solid black;
     margin-right: 0;
     margin-left: 0;
 }
 
-#container-cliente-alterar {
+#container-cliente-atendimento {
     display: block;
 }
 
-#container-cliente-atendimento, #container-cliente-criar {
+#container-cliente-alterar, #container-cliente-criar {
     display: none;
+}
+
+.container-alterar {
+    padding: 20px;
+}
+
+.container-table {
+    margin: 30px 0;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+th {
+    text-align: center;
+}
+
+.gj-unselectable {
+    padding-bottom: 15px;
 }
