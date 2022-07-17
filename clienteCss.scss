@@ -74,3 +74,21 @@ th {
 .gj-unselectable {
     padding-bottom: 15px;
 }
+
+.detalhes:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-remover-atendimento {
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #FF6B6C;
+    color: white;
+    padding: 4px 15px;
+}
+
+.btn-remover-atendimento:hover {
+    cursor: pointer;
+    color: blue;
+}

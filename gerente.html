@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel='stylesheet' type='text/css' href="indexCss.scss">
+        <link rel='stylesheet' type='text/css' href="gerenteCss.scss">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script type="text/javascript" src="gerenteJS.js" defer></script>
+    </head>
+    <body class="imagem">
+        <div class="container conteudo">
+            <div class="header row justify-content-center">
+                <div class="row justify-content-center container-botoes align-items-center">
+                    <div class="col-3 text-center">
+                        <button id="btn-lista" class="botao-gerente botao-gerente-lista">Lista Usuários</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="btn-atendimento-aberto" class="botao-gerente botao-gerente-atendimento-aberto">Atendimento em aberto</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="btn-atendimento" class="botao-gerente botao-gerente-atendimento">Atendimentos</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <form action="index.html">
+                            <button id="btn-deslogar" class="botao-gerente botao-gerente-deslogar">Deslogar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-3 text-center">
+                        <button id="btn-relatorio-funcionario" class="botao-gerente botao-gerente-relatorio-funcionario">Relatório de Funcionários</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="btn-relatorio-produto" class="botao-gerente botao-gerente-relatorio-produto">Produtos com mais reclamações</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="btn-relatorio-data" class="botao-gerente botao-gerente-criar-relatorio-data">Relatório de atendimentos em aberto por Data</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="btn-relatorio-reclamacao" class="botao-gerente botao-gerente-relatorio-reclamacao">Relatório de Reclamações</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container-gerente-lista">
+                <h1>Listagem de Usuários</h1>
+                <div class="row justify-content-center">
+                    <div class="col-10 container-table">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Cargo</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">João</th>
+                                    <td>Gerente</td>
+                                    <td class="row">
+                                        <button data-toggle="modal" data-target="#alterar" class="botao-gerente btn-alterar">Alterar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="alterar" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#visualizar" class="botao-gerente btn-visualizar">Visualizar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#remover" class=" botao-gerente btn-remover">Remover</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tereza</th>
+                                    <td>Funcionário</td>
+                                    <td class="row">
+                                        <button data-toggle="modal" data-target="#alterar-2" class="botao-gerente btn-alterar">Alterar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="alterar-2" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#visualizar-2" class="botao-gerente btn-visualizar">Visualizar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="visualizar-2" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#remover" class=" botao-gerente btn-remover">Remover</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Joaquim</th>
+                                    <td>Usuário</td>
+                                    <td class="row">
+                                        <button data-toggle="modal" data-target="#alterar-3" class="botao-gerente btn-alterar">Alterar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="alterar-3" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#visualizar-3" class="botao-gerente btn-visualizar">Visualizar</button>
+                                        <div class="modal fade bd-example-modal-lg" id="visualizar-3" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button data-toggle="modal" data-target="#remover" class=" botao-gerente btn-remover">Remover</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="container-gerente-atendimento-aberto">
+                <h1>Atendimento em aberto</h1>
+                <div class="row justify-content-center">
+                    <table class="col-10 table">
+                        <thead>
+                            <tr>
+                                <th scope="col">código</th>
+                                <th scope="col">Usuário</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Dias atrasado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1234</th>
+                                <td>João</td>
+                                <td>20/09/2022</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="atendimento-atrasado">
+                                <th scope="row">1224</th>
+                                <td>Terezinha</td>
+                                <td>10/07/2022</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6655</th>
+                                <td>Jurema</td>
+                                <td>08/02/2023</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="container-gerente-atendimento">
+                <h1>Atendimento</h1>
+                <div class="row justify-content-center">
+                    <table class="col-10 table">
+                        <thead>
+                            <tr>
+                                <th scope="col">código</th>
+                                <th scope="col">Usuário</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Dias atrasado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1234</th>
+                                <td>João</td>
+                                <td>20/09/2022</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="atendimento-atrasado">
+                                <th scope="row">1224</th>
+                                <td>Terezinha</td>
+                                <td>10/07/2022</td>
+                                <td>13</td>
+                            </tr>
+                            <tr class="atendimento-atrasado-semana">
+                                <th scope="row">6655</th>
+                                <td>Jurema</td>
+                                <td>20/07/2022</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="atendimento-atrasado-semana">
+                                <th scope="row">6655</th>
+                                <td>Jurema</td>
+                                <td>22/07/2022</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6655</th>
+                                <td>Jurema</td>
+                                <td>08/02/2023</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="atendimento-atrasado">
+                                <th scope="row">1224</th>
+                                <td>Terezinha</td>
+                                <td>10/07/2022</td>
+                                <td>13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="container-gerente-relatorio-funcionario">
+                <h1>Relatório Funcionário</h1>
+            </div>
+            
+            <div id="container-gerente-relatorio-produto">
+                <h1>Relatório Produto</h1>
+            </div>
+            
+            <div id="container-gerente-relatorio-data">
+                <h1>Relatório data</h1>
+            </div>
+            
+            <div id="container-gerente-relatorio-reclamacao">
+                <h1>Relatório reclamações</h1>
+            </div>
+            
+        </div>
+    </body>
+</html>

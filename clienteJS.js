@@ -12,28 +12,26 @@ var containerAlterar = document.getElementById('container-cliente-alterar');
 var containerAtendimento = document.getElementById("container-cliente-atendimento");
 var containerCriar = document.getElementById('container-cliente-criar');
 
+var telasGerente = [containerAlterar, containerAtendimento, containerCriar];
+
 btnAlterar.addEventListener('click', function() {
-    var containerAtendimento = document.getElementById("container-cliente-atendimento");
-    if(containerAlterar.style.display === "none" || containerAlterar.style.display === "") {
-        containerAlterar.style.display = "block";
-        containerAtendimento.style.display = "none";
-        containerCriar.style.display = "none";
-    }
+    alterarTela(containerAlterar);
 });
 
 btnAtendimento.addEventListener('click', function() {
-    if(containerAtendimento.style.display === "none" || containerAtendimento.style.display === ""){
-        containerAlterar.style.display = "none";
-        containerAtendimento.style.display = "block";
-        containerCriar.style.display = "none";
-    }
+    alterarTela(containerAtendimento);
 });
 
 btnCriar.addEventListener('click', function() {
-    var containerAtendimento = document.getElementById("container-cliente-atendimento");
-    if(containerCriar.style.display === 'none' || containerCriar.style.display === ''){
-        containerAlterar.style.display = 'none';
-        containerAtendimento.style.display = 'none';
-        containerCriar.style.display = 'block';
-    }
+    alterarTela(containerCriar);
 });
+
+function alterarTela(item) {
+    if(item.style.display === 'none' || item.style.display === '') {
+        item.style.display = "block";
+    }
+    telasGerente.forEach(function(tela) {
+        if(item.id !== tela.id)
+            tela.style.display = "none";
+    });
+}

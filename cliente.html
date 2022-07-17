@@ -126,6 +126,7 @@ and open the template in the editor.
                                     <th scope="col">produto</th>
                                     <th scope="col">Situação do atendimento</th>
                                     <th scope="col">data/hora</th>
+                                    <th scope="col">Ver atendimento / Remover</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -137,6 +138,29 @@ and open the template in the editor.
                                     <td></td>
                                     <td>Aberto</td>
                                     <td>25/09/2022</td>
+                                    <td>
+                                        <a data-toggle="modal" data-target="#detalhes" class="detalhes">
+                                            Detalhes
+                                        </a>
+                                        <div class="modal fade bd-example-modal-lg" id="detalhes" tabindex="-1" role="dialog" aria-labelledby="detalhes" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Aaaaaaaaaaaaaaaaaaaa</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-remover-atendimento">Remover</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Implante dentário</th>
@@ -146,6 +170,28 @@ and open the template in the editor.
                                     <td>dente de adamantium.</td>
                                     <td>Fechado</td>
                                     <td>15/02/2020</td>
+                                    <td>
+                                        <a data-toggle="modal" data-target="#detalhes-2" class="detalhes">
+                                            Detalhes
+                                        </a>
+                                        <div class="modal fade bd-example-modal-lg" id="detalhes-2" tabindex="-1" role="dialog" aria-labelledby="detalhes-2" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-2">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Bbbbbbbbbbbbbbbbbb</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Tratamento de beleza</th>
@@ -154,6 +200,28 @@ and open the template in the editor.
                                     <td>Cremes, shampos, etc.</td>
                                     <td>Fechado</td>
                                     <td>04/010/2015</td>
+                                    <td>
+                                        <a data-toggle="modal" data-target="#detalhes-3" class="detalhes">
+                                            Detalhes
+                                        </a>
+                                        <div class="modal fade bd-example-modal-lg" id="detalhes-3" tabindex="-1" role="dialog" aria-labelledby="detalhes-3" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                               <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detalhes-3">Detalhes do Atendimento</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       <div>
+                                                            <h3>Cccccccccccccccccc</h3>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
